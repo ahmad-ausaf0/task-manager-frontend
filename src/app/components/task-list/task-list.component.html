@@ -1,0 +1,32 @@
+<div class="container mt-4">
+    <h2 class="text-center">Task Manager</h2>
+  
+    <form (ngSubmit)="addTask()" class="mb-3">
+      <div class="input-group">
+        <input [(ngModel)]="newTask" name="task" class="form-control" placeholder="Enter task" required />
+        <button type="submit" class="btn btn-primary">Add Task</button>
+      </div>
+    </form>
+  
+    <table class="table table-striped mt-3" *ngIf="tasks.length > 0">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>Task</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ task.title }}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="deleteTask(task.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <p *ngIf="tasks.length === 0" class="text-muted text-center">No tasks available.</p>
+  </div>
+  

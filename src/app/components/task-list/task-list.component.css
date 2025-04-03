@@ -1,0 +1,9 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+  }
+  .input-group {
+    display: flex;
+    gap: 10px;
+  }
+  
