@@ -7,7 +7,9 @@ import { Task } from '../models/task.model';
   providedIn: 'root',
 })
 export class TaskService {
-  private apiUrl = 'https://task-manager-backend-836z5aeyy.vercel.app/tasks';
+  // private apiUrl = 'https://task-manager-backend-836z5aeyy.vercel.app/tasks';
+  private apiUrl = 'https://task-manager-backend-three-theta.vercel.app/tasks';
+
 
   constructor(private http: HttpClient) {}
 
